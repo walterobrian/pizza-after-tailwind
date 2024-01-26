@@ -13,18 +13,18 @@ const fakeCart = [
   },
   {
     pizzaId: 6,
-    name: 'Vegetale',
+    name: 'Biscoti',
     quantity: 1,
     unitPrice: 13,
     totalPrice: 13,
   },
-  {
-    pizzaId: 11,
-    name: 'Spinach and Mushroom',
-    quantity: 1,
-    unitPrice: 15,
-    totalPrice: 15,
-  },
+  // {
+  //   pizzaId: 11,
+  //   name: 'Spinach and Mushroom',
+  //   quantity: 1,
+  //   unitPrice: 15,
+  //   totalPrice: 15,
+  // },
 ];
 
 function Cart() {
@@ -34,9 +34,9 @@ function Cart() {
     <div className="px-4 py-3">
       <LinkButton to="/menu">&larr; Back to menu</LinkButton>
 
-      <h2 className="mt-7 text-xl font-semibold">Your cart, %NAME%</h2>
+      <h2 className="text-xl font-semibold mt-7">Your cart, %NAME%</h2>
 
-      <ul className="mt-3 divide-y divide-stone-200 border-b">
+      <ul className="mt-3 border-b divide-y divide-stone-200">
         {cart.map((item) => (
           <CartItem item={item} key={item.key} />
         ))}
